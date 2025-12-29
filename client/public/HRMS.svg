@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 100 100">
+  <defs>
+    <linearGradient id="hrmsGradient1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#3B82F6"/>
+      <stop offset="50%" stop-color="#8B5CF6"/>
+      <stop offset="100%" stop-color="#06B6D4"/>
+    </linearGradient>
+    <linearGradient id="hrmsGradient2" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#10B981"/>
+      <stop offset="100%" stop-color="#059669"/>
+    </linearGradient>
+  </defs>
+  
+  <!-- Background Circle -->
+  <circle cx="50" cy="50" r="45" fill="url(#hrmsGradient1)" opacity="0.1"/>
+  
+  <!-- Main Building/Office Icon -->
+  <rect x="25" y="35" width="50" height="40" rx="3" fill="url(#hrmsGradient1)"/>
+  
+  <!-- Building Windows -->
+  <rect x="30" y="42" width="6" height="6" rx="1" fill="white" opacity="0.9"/>
+  <rect x="40" y="42" width="6" height="6" rx="1" fill="white" opacity="0.9"/>
+  <rect x="54" y="42" width="6" height="6" rx="1" fill="white" opacity="0.9"/>
+  <rect x="64" y="42" width="6" height="6" rx="1" fill="white" opacity="0.9"/>
+  
+  <rect x="30" y="52" width="6" height="6" rx="1" fill="white" opacity="0.9"/>
+  <rect x="40" y="52" width="6" height="6" rx="1" fill="white" opacity="0.9"/>
+  <rect x="54" y="52" width="6" height="6" rx="1" fill="white" opacity="0.9"/>
+  <rect x="64" y="52" width="6" height="6" rx="1" fill="white" opacity="0.9"/>
+  
+  <!-- Door -->
+  <rect x="46" y="62" width="8" height="13" rx="1" fill="white" opacity="0.9"/>
+  
+  <!-- People Icons (HR representation) -->
+  <!-- Person 1 -->
+  <circle cx="35" cy="25" r="3" fill="url(#hrmsGradient2)"/>
+  <rect x="32" y="28" width="6" height="4" rx="2" fill="url(#hrmsGradient2)"/>
+  
+  <!-- Person 2 -->
+  <circle cx="50" cy="20" r="3.5" fill="url(#hrmsGradient1)"/>
+  <rect x="46.5" y="23.5" width="7" height="4.5" rx="2" fill="url(#hrmsGradient1)"/>
+  
+  <!-- Person 3 -->
+  <circle cx="65" cy="25" r="3" fill="url(#hrmsGradient2)"/>
+  <rect x="62" y="28" width="6" height="4" rx="2" fill="url(#hrmsGradient2)"/>
+  
+  <!-- Management/System Lines -->
+  <path d="M35 30 L50 25 L65 30" stroke="url(#hrmsGradient1)" stroke-width="2" fill="none" opacity="0.7"/>
+  
+  <!-- HR Text (stylized) -->
+  <text x="50" y="90" text-anchor="middle" font-family="Arial, sans-serif" font-size="8" font-weight="bold" fill="url(#hrmsGradient1)">HRMS</text>
+</svg>
