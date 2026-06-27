@@ -8,7 +8,7 @@ router.post("/signUp", async (req, res) => {
   try {
     const { name, email, password, contact, image, location,role } = req.body;
 
-    if (!name || !email || !password || !contact || !image || !location ||!role) {
+    if (!name || !email || !password || !contact || !location ||!role) {
       return res.status(400).json({
         success: false,
         message: "All fields are required",
@@ -25,11 +25,20 @@ router.post("/signUp", async (req, res) => {
 
     const hashedPassword = await bcrypt.hash(password, 10);
 
+    // Remove non-numeric characters from contact
+    const cleanContact = contact.replace(/\D/g, '');
+    if (!cleanContact) {
+      return res.status(400).json({
+        success: false,
+        message: "Contact must contain at least one digit",
+      });
+    }
+
     const user = new User({
       name,
       email,
       password: hashedPassword,
-      contact,
+      contact: Number(cleanContact),
       location,
       image,
       role,
@@ -41,10 +50,11 @@ router.post("/signUp", async (req, res) => {
       message: "User created successfully",
     });
   } catch (error) {
-    console.error("Signup error:", error);
+    console.error("Signup error:", error.message);
+    console.error("Signup error details:", error);
     return res.status(500).json({
       success: false,
-      message: "Internal server error",
+      message: "Internal server error: " + error.message,
     });
   }
 });
